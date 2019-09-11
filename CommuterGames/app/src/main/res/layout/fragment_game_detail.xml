@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2018 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginLeft="8dp"
+    android:background="@color/colorListBackground">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/gameImageDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:id="@+id/titleDetail"
+                style="@style/TextAppearance.AppCompat.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/gameImageDetail"
+                android:padding="8dp"
+                android:text="@string/title_placeholder"
+                android:background="#8054D266"
+                android:textColor="#FFFFFF"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+            <TextView
+                android:id="@+id/newsTitleDetail"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gameImageDetail"
+                android:padding="16dp"
+                android:text="@string/news_placeholder"
+                android:textColor="?android:textColorSecondary" />
+
+            <TextView
+                android:id="@+id/subTitleDetail"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/newsTitleDetail"
+                android:layout_marginTop="1dp"
+                android:padding="16dp"
+                android:text="@string/subtitle_detail_text" />
+
+            <Button
+                android:id="@+id/button"
+                style="@style/ButtonStyle"
+                android:layout_width="326dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/subTitleDetail"
+                android:layout_below="@+id/gameImageDetail"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_toEndOf="@+id/newsTitleDetail"
+                android:layout_toRightOf="@+id/newsTitleDetail"
+                android:onClick="openGameActivity"
+                android:text="Play" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

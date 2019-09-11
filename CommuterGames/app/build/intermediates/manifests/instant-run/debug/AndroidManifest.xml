@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.danielklarssen.android.commutergames"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="26" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@drawable/app_icon"
+        android:label="CommuterGames"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/AppTheme.NoActionBar" >
+        <activity android:name="com.example.android.CommuterGames.gamelistActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.CommuterGames.GameActivity"
+            android:label="Game"
+            android:parentActivityName="com.example.android.CommuterGames.gamelistActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.CommuterGames.gamelistActivity" />
+        </activity>
+        <activity
+            android:name="com.example.android.CommuterGames.ui.login.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:parentActivityName="com.example.android.CommuterGames.gamelistActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.CommuterGames.gamelistActivity" />
+        </activity>
+        <activity
+            android:name="com.example.android.CommuterGames.ProfileActivity"
+            android:label="Profile"
+            android:parentActivityName="com.example.android.CommuterGames.gamelistActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.CommuterGames.gamelistActivity" />
+        </activity>
+        <activity
+            android:name="com.example.android.CommuterGames.FriendActivity"
+            android:label=""
+            android:parentActivityName="com.example.android.CommuterGames.gamelistActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.CommuterGames.gamelistActivity" />
+        </activity>
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+
+        <provider
+            android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="com.danielklarssen.android.commutergames.lifecycle-trojan"
+            android:exported="false"
+            android:multiprocess="true" />
+        <provider
+            android:name="com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="com.danielklarssen.android.commutergames.com.android.tools.ir.server.InstantRunContentProvider"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>

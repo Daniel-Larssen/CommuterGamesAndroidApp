@@ -1,0 +1,224 @@
+<!--
+  Copyright 2018 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources>
+    <string name="app_name">Material Me!</string>
+    <string name="title_placeholder">Title</string>
+    <string name="news_placeholder">Action</string>
+    <string name="sports_info_placeholder">Here is some news</string>
+    <string name="subtitle_detail_text">Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Praesent ultrices congue rutrum.
+        Phasellus elementum ipsum ac convallis aliquam. Suspendisse eleifend
+        eros a enim faucibus mollis. Nunc placerat, est vitae vestibulum
+        blandit, dolor diam fringilla tellus, eu euismod mauris neque
+        at neque.</string>
+
+    <string-array name="game_titles">
+        <item>Dance Off</item>
+        <item>Sword Fighter</item>
+        <item>No Glory</item>
+        <item>Surreal</item>
+        <item>Smash</item>
+        <item>Guitar Hero</item>
+        <item>Diary Shopper</item>
+        <item>Small Pirates</item>
+        <item>Egdy Orphan</item>
+        <item>Necessary</item>
+        <item>Roof Sniper</item>
+    </string-array>
+    <string-array name="game_info">
+       <item>Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Praesent ultrices congue rutrum.
+        </item>
+        <item>Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Praesent ultrices congue rutrum.
+        </item>
+        <item>Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Praesent ultrices congue rutrum.
+        </item>
+        <item>Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Praesent ultrices congue rutrum.
+        </item>
+        <item>Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Praesent ultrices congue rutrum.
+        </item>
+        <item>Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Praesent ultrices congue rutrum.
+        </item>
+        <item>Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Praesent ultrices congue rutrum.
+        </item>
+        <item>Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Praesent ultrices congue rutrum.
+        </item>
+        <item>Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Praesent ultrices congue rutrum.
+        </item>
+        <item>Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Praesent ultrices congue rutrum.
+        </item>
+        <item>Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Praesent ultrices congue rutrum.
+        </item>
+    </string-array>
+    <array name="game_images">
+        <item>@drawable/img_game1</item>
+        <item>@drawable/img_game2</item>
+        <item>@drawable/img_game3</item>
+        <item>@drawable/img_game4</item>
+        <item>@drawable/img_game5</item>
+        <item>@drawable/img_game6</item>
+        <item>@drawable/img_game7</item>
+        <item>@drawable/img_game8</item>
+        <item>@drawable/img_game9</item>
+        <item>@drawable/img_game10</item>
+        <item>@drawable/img_game11</item>
+    </array>
+
+    <string-array name="friend_firstnames">
+        <item>Chase </item>
+        <item>Claude</item>
+        <item>Paul</item>
+        <item>Reese</item>
+        <item>Sean</item>
+        <item>Trey</item>
+        <item>Bram</item>
+        <item>Brandt</item>
+        <item>Cash</item>
+        <item>Gery</item>
+        <item>Dex</item>
+    </string-array>
+    <string-array name="friend_middlenames">
+        <item>Ace</item>
+        <item>Abe</item>
+        <item>Beck</item>
+        <item>Blake</item>
+        <item>Dean</item>
+        <item>Grant</item>
+        <item>Hugh</item>
+        <item>James</item>
+        <item>Charles</item>
+        <item></item>
+        <item>George</item>
+    </string-array>
+    <string-array name="friend_lastnames">
+        <item>Smith </item>
+        <item>Johnson</item>
+        <item>Williams</item>
+        <item>Jones</item>
+        <item>Brown</item>
+        <item>Davis</item>
+        <item>Miller</item>
+        <item>Wilson</item>
+        <item>Moore</item>
+        <item>Taylor</item>
+        <item>Thomas</item>
+    </string-array>
+    <string-array name="friend_bio">
+        <item>Trade insults with children while playing a minigame.</item>
+        <item>Jump over stuff until you're done.</item>
+        <item>Hold right except sometimes.</item>
+        <item>Hit things with sticks until your numbers go high.</item>
+        <item>Push buttons better than the other guy.</item>
+        <item>Take some blocks and put them somewhere else.</item>
+        <item>Here is some Running news!</item>
+        <item>Here is some Soccer news!</item>
+        <item>Here is some Swimming news!</item>
+        <item>Here is some Table Tennis news!</item>
+        <item>Here is some Tennis news!</item>
+    </string-array>
+    <array name="friend_images">
+        <item>@drawable/img_profile1</item>
+        <item>@drawable/img_profile2</item>
+        <item>@drawable/img_profile3</item>
+        <item>@drawable/img_profile11</item>
+        <item>@drawable/img_profile8</item>
+        <item>@drawable/img_profile6</item>
+        <item>@drawable/img_profile7</item>
+        <item>@drawable/img_profile8</item>
+        <item>@drawable/img_profile9</item>
+        <item>@drawable/img_profile10</item>
+        <item>@drawable/img_profile11</item>
+    </array>
+
+    <string-array name="example_messages">
+        <item>Hey, You on right now?</item>
+        <item>This is filler text.</item>
+        <item>Im not very good at being creative.</item>
+        <item>Something something something.</item>
+        <item>The weather really looks nice today... Yupp.</item>
+        <item>This is a long text that will show me if there is any error with long texts which is really handy.</item>
+        <item>Something something something.</item>
+        <item>This is filler text.</item>
+        <item>The weather really looks nice today... Yupp.</item>
+        <item>This is filler text.</item>
+        <item>Im not very good at being creative.</item>
+        <item>Something something something.</item>
+    </string-array>
+    <string-array name="example_messages_id">
+        <item>You</item>
+        <item>Tom#3234</item>
+        <item>You</item>
+        <item>Tom#3234</item>
+        <item>Tom#3234</item>
+        <item>You</item>
+        <item>You</item>
+        <item>Tom#3234</item>
+        <item>You</item>
+        <item>Tom#3234</item>
+        <item>Tom#3234</item>
+        <item>You</item>
+    </string-array>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Like the article?</string>
+    <string name="yes_message">ARTICLE: Like</string>
+    <string name="no_message">ARTICLE: Thanks</string>
+    <string name="open_chat">Open Chat</string>
+    <string name="titlehome">Home</string>
+    <string name="titledashboard">Dashboard</string>
+    <string name="titlenotifications">Notifications</string>
+    <string name="profile_hint_middlename">Middlename</string>
+    <string name="profile_hint_adress">Adress</string>
+    <string name="profile_hint_zip">Zip</string>
+    <string name="profile_hint_phone">Phone</string>
+    <string name="profile_hint_firstname">Firstname</string>
+    <string name="add_friend">Add Friend</string>
+
+
+</resources>

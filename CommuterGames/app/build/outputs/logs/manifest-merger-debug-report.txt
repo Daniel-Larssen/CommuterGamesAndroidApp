@@ -1,0 +1,233 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:2:1-53:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\828e004e3e071ab4b222dd55c3906fd3\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:design:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\9766a6a6ef23f9c77be8f7cbc8794a8d\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\2fdbea054a2bd184fc24ad7e50ebab78\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\9ed2aaaf1b106fab1142d70393eb5872\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\d98d91a37592135ea9b7e744b9414556\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\1893fc04ecd65539ff1711240f707dad\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\87613ec14a07ef4ce40c519a4aef69bb\AndroidManifest.xml:17:1-28:12
+MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\0d2d637247fa23e66a0c3983848ff51b\AndroidManifest.xml:17:1-30:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\211424e0165dcf04b445abba865d880a\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\335024d4500cc8d54cf2dc44464733e2\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\c86661334d6c0d4af71326bd33ef4eb1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\665aac319e0759965652cd796c7d6b5b\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\de433e3fc5fdc486bd5655bc4c5a7c8f\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\a6367ba330539c4f773c2b4c7e5763ac\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\91863aec5182ede0184a7cdcbe5fcfe4\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\1f566c1404b201a6f96776b2fda9f043\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\7658bbe022ea0562f8ee75f360384f7f\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\f26e384f1f2b772482505c27d8ea126b\AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\8a09c31e5112bf5e56824db92c716232\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\f8d7f33b9da20082a5186a2a217ea24a\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:2:1-53:12
+	package
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:3:5-48
+		INJECTED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml
+		INJECTED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:2:1-53:12
+		INJECTED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:2:1-53:12
+		INJECTED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:5:5-51:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\828e004e3e071ab4b222dd55c3906fd3\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\828e004e3e071ab4b222dd55c3906fd3\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\9766a6a6ef23f9c77be8f7cbc8794a8d\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\9766a6a6ef23f9c77be8f7cbc8794a8d\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\2fdbea054a2bd184fc24ad7e50ebab78\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\2fdbea054a2bd184fc24ad7e50ebab78\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\9ed2aaaf1b106fab1142d70393eb5872\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\9ed2aaaf1b106fab1142d70393eb5872\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\d98d91a37592135ea9b7e744b9414556\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\d98d91a37592135ea9b7e744b9414556\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\1893fc04ecd65539ff1711240f707dad\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\1893fc04ecd65539ff1711240f707dad\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\87613ec14a07ef4ce40c519a4aef69bb\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\87613ec14a07ef4ce40c519a4aef69bb\AndroidManifest.xml:22:5-26:19
+MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\0d2d637247fa23e66a0c3983848ff51b\AndroidManifest.xml:22:5-28:19
+MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\0d2d637247fa23e66a0c3983848ff51b\AndroidManifest.xml:22:5-28:19
+MERGED from [com.android.support:transition:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\665aac319e0759965652cd796c7d6b5b\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\665aac319e0759965652cd796c7d6b5b\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\de433e3fc5fdc486bd5655bc4c5a7c8f\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\de433e3fc5fdc486bd5655bc4c5a7c8f\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\a6367ba330539c4f773c2b4c7e5763ac\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\a6367ba330539c4f773c2b4c7e5763ac\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\91863aec5182ede0184a7cdcbe5fcfe4\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\91863aec5182ede0184a7cdcbe5fcfe4\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\1f566c1404b201a6f96776b2fda9f043\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\1f566c1404b201a6f96776b2fda9f043\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\7658bbe022ea0562f8ee75f360384f7f\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\7658bbe022ea0562f8ee75f360384f7f\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\f26e384f1f2b772482505c27d8ea126b\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\f26e384f1f2b772482505c27d8ea126b\AndroidManifest.xml:25:5-29:19
+	android:supportsRtl
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:9:9-35
+	android:label
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:8:9-38
+	android:icon
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:7:9-42
+	android:allowBackup
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:10:9-52
+activity#com.example.android.CommuterGames.gamelistActivity
+ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:12:19-51
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:16:27-74
+activity#com.example.android.CommuterGames.GameActivity
+ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:19:9-26:20
+	android:parentActivityName
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:22:13-59
+	android:label
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:21:13-33
+	android:name
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:20:13-41
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:23:13-25:86
+	android:value
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:25:17-83
+	android:name
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:24:17-63
+activity#com.example.android.CommuterGames.ui.login.LoginActivity
+ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:27:9-34:20
+	android:parentActivityName
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:30:13-59
+	android:label
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:29:13-57
+	android:name
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:28:13-51
+activity#com.example.android.CommuterGames.ProfileActivity
+ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:35:9-42:20
+	android:parentActivityName
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:38:13-59
+	android:label
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:37:13-36
+	android:name
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:36:13-44
+activity#com.example.android.CommuterGames.FriendActivity
+ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:43:9-50:20
+	android:parentActivityName
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:46:13-59
+	android:label
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:45:13-29
+	android:name
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml:44:13-43
+uses-sdk
+INJECTED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml
+INJECTED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\828e004e3e071ab4b222dd55c3906fd3\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\828e004e3e071ab4b222dd55c3906fd3\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:design:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\9766a6a6ef23f9c77be8f7cbc8794a8d\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\9766a6a6ef23f9c77be8f7cbc8794a8d\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\2fdbea054a2bd184fc24ad7e50ebab78\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\2fdbea054a2bd184fc24ad7e50ebab78\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\9ed2aaaf1b106fab1142d70393eb5872\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\9ed2aaaf1b106fab1142d70393eb5872\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\d98d91a37592135ea9b7e744b9414556\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\d98d91a37592135ea9b7e744b9414556\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\1893fc04ecd65539ff1711240f707dad\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\1893fc04ecd65539ff1711240f707dad\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\87613ec14a07ef4ce40c519a4aef69bb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\87613ec14a07ef4ce40c519a4aef69bb\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\0d2d637247fa23e66a0c3983848ff51b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\0d2d637247fa23e66a0c3983848ff51b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\211424e0165dcf04b445abba865d880a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\211424e0165dcf04b445abba865d880a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\335024d4500cc8d54cf2dc44464733e2\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\335024d4500cc8d54cf2dc44464733e2\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\c86661334d6c0d4af71326bd33ef4eb1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\c86661334d6c0d4af71326bd33ef4eb1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\665aac319e0759965652cd796c7d6b5b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\665aac319e0759965652cd796c7d6b5b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\de433e3fc5fdc486bd5655bc4c5a7c8f\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\de433e3fc5fdc486bd5655bc4c5a7c8f\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\a6367ba330539c4f773c2b4c7e5763ac\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\a6367ba330539c4f773c2b4c7e5763ac\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\91863aec5182ede0184a7cdcbe5fcfe4\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\91863aec5182ede0184a7cdcbe5fcfe4\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\1f566c1404b201a6f96776b2fda9f043\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\1f566c1404b201a6f96776b2fda9f043\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\7658bbe022ea0562f8ee75f360384f7f\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\7658bbe022ea0562f8ee75f360384f7f\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\f26e384f1f2b772482505c27d8ea126b\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\f26e384f1f2b772482505c27d8ea126b\AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\8a09c31e5112bf5e56824db92c716232\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\8a09c31e5112bf5e56824db92c716232\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\f8d7f33b9da20082a5186a2a217ea24a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\f8d7f33b9da20082a5186a2a217ea24a\AndroidManifest.xml:20:5-44
+INJECTED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml
+INJECTED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\9766a6a6ef23f9c77be8f7cbc8794a8d\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml
+		INJECTED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml
+		ADDED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml
+		INJECTED from C:\GitLibs\CommuterGamesAndroidApp\CommuterGames\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\9766a6a6ef23f9c77be8f7cbc8794a8d\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\2fdbea054a2bd184fc24ad7e50ebab78\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\2fdbea054a2bd184fc24ad7e50ebab78\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\9ed2aaaf1b106fab1142d70393eb5872\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\9ed2aaaf1b106fab1142d70393eb5872\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\d98d91a37592135ea9b7e744b9414556\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\d98d91a37592135ea9b7e744b9414556\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\1893fc04ecd65539ff1711240f707dad\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\1893fc04ecd65539ff1711240f707dad\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\87613ec14a07ef4ce40c519a4aef69bb\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\87613ec14a07ef4ce40c519a4aef69bb\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\665aac319e0759965652cd796c7d6b5b\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\665aac319e0759965652cd796c7d6b5b\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\de433e3fc5fdc486bd5655bc4c5a7c8f\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\de433e3fc5fdc486bd5655bc4c5a7c8f\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\a6367ba330539c4f773c2b4c7e5763ac\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\a6367ba330539c4f773c2b4c7e5763ac\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\91863aec5182ede0184a7cdcbe5fcfe4\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\91863aec5182ede0184a7cdcbe5fcfe4\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\1f566c1404b201a6f96776b2fda9f043\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\1f566c1404b201a6f96776b2fda9f043\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\7658bbe022ea0562f8ee75f360384f7f\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\7658bbe022ea0562f8ee75f360384f7f\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\f26e384f1f2b772482505c27d8ea126b\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\f26e384f1f2b772482505c27d8ea126b\AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:design:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\9766a6a6ef23f9c77be8f7cbc8794a8d\AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:design:26.1.0] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\9766a6a6ef23f9c77be8f7cbc8794a8d\AndroidManifest.xml:27:13-51
+provider#android.arch.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\0d2d637247fa23e66a0c3983848ff51b\AndroidManifest.xml:23:9-27:43
+	android:authorities
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\0d2d637247fa23e66a0c3983848ff51b\AndroidManifest.xml:25:13-68
+	android:multiprocess
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\0d2d637247fa23e66a0c3983848ff51b\AndroidManifest.xml:27:13-40
+	android:exported
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\0d2d637247fa23e66a0c3983848ff51b\AndroidManifest.xml:26:13-37
+	android:name
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\voje\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\0d2d637247fa23e66a0c3983848ff51b\AndroidManifest.xml:24:13-83
