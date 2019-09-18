@@ -8,8 +8,13 @@
         android:minSdkVersion="15"
         android:targetSdkVersion="26" />
 
+    <!-- Needed to use the REST.api -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
         android:debuggable="true"
         android:icon="@drawable/app_icon"
         android:label="CommuterGames"
@@ -55,10 +60,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.CommuterGames.gamelistActivity" />
         </activity>
-
-        <meta-data
-            android:name="android.support.VERSION"
-            android:value="26.1.0" />
 
         <provider
             android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"

@@ -1,4 +1,4 @@
-#Mon Sep 09 14:08:20 CEST 2019
-base.0=C\:\\Users\\voje\\Desktop\\CommuterGames\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\4
+#Wed Sep 11 12:19:03 CEST 2019
+base.0=C\:\\GitLibs\\CommuterGamesAndroidApp\\CommuterGames\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\4
 path.0=classes.dex
 renamed.0=classes.dex

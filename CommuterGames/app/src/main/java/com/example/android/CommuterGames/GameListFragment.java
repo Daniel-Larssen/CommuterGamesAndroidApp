@@ -109,6 +109,8 @@ public class GameListFragment extends Fragment {
         // Get the resources from the XML file.
         String[] gamesList = getResources().getStringArray(R.array.game_titles);
         String[] gamesInfo = getResources().getStringArray(R.array.game_info);
+
+
         TypedArray gamesImageResources = getResources().obtainTypedArray(R.array.game_images);
 
         // Clear the existing data (to avoid duplication).
@@ -132,6 +134,10 @@ public class GameListFragment extends Fragment {
     public static GameListFragment newInstance() {
         return new GameListFragment();
     }
+
+
+
+
 
 
 
