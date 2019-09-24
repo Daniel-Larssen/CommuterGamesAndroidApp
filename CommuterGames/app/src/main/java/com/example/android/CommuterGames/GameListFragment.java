@@ -45,7 +45,7 @@ public class GameListFragment extends Fragment {
         mGamesData = new ArrayList<>();
 
         // Initialize the adapter and set it to the RecyclerView.
-        mAdapter = new GamesAdapter(this.getActivity(), mGamesData);
+        mAdapter = new GamesAdapter(this.getActivity(), GamelistActivity.gameArrayList);
         mRecyclerView.setAdapter(mAdapter);
 
         // Get the data.
@@ -114,20 +114,20 @@ public class GameListFragment extends Fragment {
         TypedArray gamesImageResources = getResources().obtainTypedArray(R.array.game_images);
 
         // Clear the existing data (to avoid duplication).
-        mGamesData.clear();
+        //mGamesData.clear();
 
-        // Create the ArrayList of games objects with the titles and
-        // information about each game
-        for (int i = 0; i < gamesList.length; i++) {
-            //TODO: CREATE TEMPORARY LIST OF FRIENDS.
-            mGamesData.add(new Game(gamesList[i], gamesInfo[i], gamesImageResources.getResourceId(i, 0)));
-        }
+            // Create the ArrayList of games objects with the titles and
+            // information about each game
+            ////for (int i = 0; i < gamesList.length; i++) {
+                //TODO: CREATE TEMPORARY LIST OF FRIENDS.
+              // mGamesData.add(new Game(gamesList[i], gamesInfo[i], gamesImageResources.getResourceId(i, 0)));
+            //}
 
         // Recycle the typed array.
-        gamesImageResources.recycle();
+        //gamesImageResources.recycle();
 
         // Notify the adapter of the change.
-        mAdapter.notifyDataSetChanged();
+        //mAdapter.notifyDataSetChanged();
     }
 
 

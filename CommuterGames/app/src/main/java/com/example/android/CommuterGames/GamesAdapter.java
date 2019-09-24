@@ -45,11 +45,11 @@ class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder>  {
     /**
      * Constructor that passes in the sports data and the context.
      *
-     * @param sportsData ArrayList containing the sports data.
+     * @param gameArrayList ArrayList containing the game data.
      * @param context Context of the application.
      */
-    GamesAdapter(Context context, ArrayList<Game> sportsData) {
-        this.mGamesData = sportsData;
+    GamesAdapter(Context context, ArrayList<Game> gameArrayList) {
+        this.mGamesData = gameArrayList;
         this.mContext = context;
     }
 
@@ -101,6 +101,7 @@ class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder>  {
         // Member Variables for the TextViews
         private TextView mTitleText;
         private TextView mInfoText;
+        private TextView mGenreText;
         private ImageView mGamesImage;
 
         /**
@@ -115,6 +116,7 @@ class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder>  {
             mTitleText = itemView.findViewById(R.id.title);
             mInfoText = itemView.findViewById(R.id.gameBio);
             mGamesImage = itemView.findViewById(R.id.sportsImage);
+            mGenreText = itemView.findViewById(R.id.genre);
 
             // Set the OnClickListener to the entire view.
             itemView.setOnClickListener(this);
@@ -123,11 +125,18 @@ class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder>  {
         void bindTo(Game currentGame){
             // Populate the textviews with data.
             mTitleText.setText(currentGame.getTitle());
-            mInfoText.setText(currentGame.getInfo());
+
+            String cutDesc = currentGame.getDescription();
+            if(cutDesc.length() > 100) {
+                cutDesc = cutDesc.substring(0,100) + "...";
+            }
+
+            mInfoText.setText(cutDesc);
+            mGenreText.setText(currentGame.getGenre());
+
 
             // Load the images into the ImageView using the Glide library.
-            Glide.with(mContext).load(
-                    currentGame.getImageResource()).into(mGamesImage);
+            //Glide.with(mContext).load(currentGame.getImageResource()).into(mGamesImage);
         }
 
         /**
@@ -145,6 +154,10 @@ class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder>  {
                 Game currentGame = mGamesData.get(getAdapterPosition());
                 Bundle bundle = new Bundle();
                 bundle.putString("title", currentGame.getTitle());
+                bundle.putString("creator", currentGame.getCreator());
+                bundle.putString("genre", currentGame.getGenre());
+                bundle.putString("description", currentGame.getDescription());
+                bundle.putInt("rating", currentGame.getRating());
                 bundle.putInt("image_resource", currentGame.getImageResource());
                 detailFragment.setArguments(bundle);
 

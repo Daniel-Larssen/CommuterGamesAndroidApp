@@ -66,7 +66,7 @@ public class Activity extends AppCompatActivity {
      * Opens the Gamelist activity and is used in the navigation bar.
      */
     public void gameListActivity() {
-        Intent gameListActivity = new Intent(this, gamelistActivity.class);
+        Intent gameListActivity = new Intent(this, GamelistActivity.class);
         startActivity(gameListActivity);
     }
 

@@ -16,7 +16,7 @@
 
 package com.example.android.CommuterGames;
 
-import android.widget.Toast;
+import android.content.res.TypedArray;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,32 +33,21 @@ class Game {
     // Member variables representing the title, information and image about the game.
     private int id;
     private String title;
-    private String info;
     private String description;
     private String genre;
     private String creator;
     private int rating;
     private final int imageResource;
 
-    static final String TABELL_NAME = "games";
-    static final String KOL_NAME_TITLE = "title";
-    static final String KOL_NAME_GENRE = "genre";
-    static final String KOL_NAME_CREATOR = "creator";
-    static final String KOL_NAME_ID = "id";
-    static final String KOL_NAME_RATING = "rating";
-    static final String KOL_NAME_DESC = "description";
+    // Kollone names for the table, and the table name.
+    private static final String TABLE_NAME = "games";
+    private static final String KOL_NAME_TITLE = "title";
+    private static final String KOL_NAME_GENRE = "genre";
+    private static final String KOL_NAME_CREATOR = "creator";
+    private static final String KOL_NAME_ID = "id";
+    private static final String KOL_NAME_RATING = "rating";
+    private static final String KOL_NAME_DESC = "description";
 
-    /**
-     * Constructor for the Game data model.
-     *
-     * @param title The name if the sport.
-     * @param info Information about the sport.
-     */
-    public Game(String title, String info, int imageResource) {
-        this.title = title;
-        this.info = info;
-        this.imageResource = imageResource;
-    }
 
     // Creates a game object from a JSONObject
     public Game(JSONObject jsonGame) {
@@ -69,7 +58,7 @@ class Game {
         this.genre = jsonGame.optString(KOL_NAME_GENRE);
         this.id = jsonGame.optInt(KOL_NAME_ID);
         this.rating = jsonGame.optInt(KOL_NAME_RATING);
-        imageResource = 0;
+        imageResource = 1;
     }
 
     /**
@@ -81,20 +70,11 @@ class Game {
         return title;
     }
 
-    /**
-     * Gets the info about the game.
-     *
-     * @return The info about the game.
-     */
-    String getInfo() {
-        return info;
-    }
-
     // Metode som lager en ArrayList med Vare-objekter basert på en streng med JSONdata
     public static ArrayList<Game> lagGameListe(String jsonVarer) throws JSONException, NullPointerException {
         ArrayList<Game> gameList = new ArrayList<Game>();
         JSONObject jsonData = new JSONObject(jsonVarer);
-        JSONArray jsonGameTabell = jsonData.optJSONArray(TABELL_NAME);
+        JSONArray jsonGameTabell = jsonData.optJSONArray(TABLE_NAME);
 
         for(int i = 0; i < jsonGameTabell.length(); i++) {
             JSONObject jsonGame = (JSONObject) jsonGameTabell.get(i);
@@ -103,7 +83,6 @@ class Game {
         }
         return gameList;
     }
-
 
     /**
      * Gets the image resource belonging to the game.
@@ -114,4 +93,23 @@ class Game {
         return imageResource;
     }
 
+    public String getGenre() {
+        return genre;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getCreator() {
+        return creator;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public int getId() {
+        return id;
+    }
 }

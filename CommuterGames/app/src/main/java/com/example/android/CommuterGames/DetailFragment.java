@@ -35,16 +35,25 @@ public class DetailFragment extends Fragment {
 
             // Collects the title of the game.
             String title = bundle.getString("title");
+            String desc = bundle.getString("description");
+            String creator = bundle.getString("creator");
+            String genre = bundle.getString("genre");
+            int rating = bundle.getInt("rating");
+
 
             // Initialize the views.
-            TextView titleView = rootView.findViewById(R.id.titleDetail);
+            TextView titleView = rootView.findViewById(R.id.titleTextView);
             ImageView gameImage = rootView.findViewById(R.id.gameImageDetail);
+            TextView genreView = rootView.findViewById(R.id.genreTextView);
+            TextView descView = rootView.findViewById(R.id.descTextView);
 
             // Set the text from the Intent extra.
             titleView.setText(title);
+            genreView.setText(genre);
+            descView.setText(desc);
 
             // Load the image using the Glide library and the Intent extra.
-            Glide.with(this).load(bundle.getInt("image_resource",0)).into(gameImage);
+            //Glide.with(this).load(bundle.getInt("image_resource",0)).into(gameImage);
         }
 
         return  rootView;

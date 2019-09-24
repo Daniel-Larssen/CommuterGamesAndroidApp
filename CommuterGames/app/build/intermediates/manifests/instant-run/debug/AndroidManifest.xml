@@ -21,7 +21,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme.NoActionBar" >
-        <activity android:name="com.example.android.CommuterGames.gamelistActivity" >
+        <activity android:name="com.example.android.CommuterGames.GamelistActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,34 +31,34 @@
         <activity
             android:name="com.example.android.CommuterGames.GameActivity"
             android:label="Game"
-            android:parentActivityName="com.example.android.CommuterGames.gamelistActivity" >
+            android:parentActivityName="com.example.android.CommuterGames.GamelistActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.CommuterGames.gamelistActivity" />
+                android:value="com.example.android.CommuterGames.GamelistActivity" />
         </activity>
         <activity
             android:name="com.example.android.CommuterGames.ui.login.LoginActivity"
             android:label="@string/title_activity_login"
-            android:parentActivityName="com.example.android.CommuterGames.gamelistActivity" >
+            android:parentActivityName="com.example.android.CommuterGames.GamelistActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.CommuterGames.gamelistActivity" />
+                android:value="com.example.android.CommuterGames.GamelistActivity" />
         </activity>
         <activity
             android:name="com.example.android.CommuterGames.ProfileActivity"
             android:label="Profile"
-            android:parentActivityName="com.example.android.CommuterGames.gamelistActivity" >
+            android:parentActivityName="com.example.android.CommuterGames.GamelistActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.CommuterGames.gamelistActivity" />
+                android:value="com.example.android.CommuterGames.GamelistActivity" />
         </activity>
         <activity
             android:name="com.example.android.CommuterGames.FriendActivity"
             android:label=""
-            android:parentActivityName="com.example.android.CommuterGames.gamelistActivity" >
+            android:parentActivityName="com.example.android.CommuterGames.GamelistActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.CommuterGames.gamelistActivity" />
+                android:value="com.example.android.CommuterGames.GamelistActivity" />
         </activity>
 
         <provider

@@ -21,7 +21,7 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:background="@color/colorListBackground"
-    tools:context="com.example.android.CommuterGames.gamelistActivity">
+    tools:context="com.example.android.CommuterGames.GamelistActivity">
 
    <!-- <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
