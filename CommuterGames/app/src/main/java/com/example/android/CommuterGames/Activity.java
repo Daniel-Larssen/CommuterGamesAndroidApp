@@ -1,13 +1,18 @@
 package com.example.android.CommuterGames;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
-import com.example.android.CommuterGames.ui.login.LoginActivity;
+import com.android.volley.RequestQueue;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 
 /**
  * This is the class that all other activities will extend to,
@@ -21,7 +26,7 @@ public class Activity extends AppCompatActivity {
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        public boolean onNavigationItemSelected(MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     profileActivity();
@@ -37,6 +42,38 @@ public class Activity extends AppCompatActivity {
         }
     };
 
+    // ------------------------------- Database -----------------------------------
+
+    /**
+     * Checks if there is a internet connection up. Needs to be
+     * called from all of the pages where items from the database
+     * is being collected.
+     *
+     * @return
+     */
+    public boolean isOnline() {
+        ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Activity.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+        return (networkInfo != null && networkInfo.isConnected());
+    }
+
+    // Reads all the games on the database.
+    public  void readData(StringRequest stringRequest) {
+        if (isOnline()) {
+            RequestQueue queue = Volley.newRequestQueue(this);
+            queue.add(stringRequest);
+        } else {
+            Toast.makeText(this, "Ingen nettverkstilgang. Kan ikke laste varer.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    // TODO finish the collection of data
+    public void onErrorResponse(VolleyError error) {
+        Toast.makeText(this, "volley feilet!", Toast.LENGTH_LONG).show();
+
+    }
+
+    // -------------------------------- // -----------------------------------------
 
     /**
      * Opens the Profile activity and is used in the navigation bar.
@@ -50,8 +87,8 @@ public class Activity extends AppCompatActivity {
      * Opens the Login activity and is used in the navigation bar.
      */
     public void loginActivity(View view) {
-        Intent loginIntent = new Intent(this, LoginActivity.class);
-        startActivity(loginIntent);
+        //Intent loginIntent = new Intent(this, LoginActivity.class);
+        //startActivity(loginIntent);
     }
 
     /**

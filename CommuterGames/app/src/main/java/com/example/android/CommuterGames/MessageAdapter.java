@@ -111,9 +111,10 @@ class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHolder>  {
 
         // Sets the values where they should be
         void bindTo(Message currentMessage){
+
             // Populate the textviews with data.
             mUsername.setText(currentMessage.getUsername());
-            mMessage.setText(currentMessage.getMessage());
+            mMessage.setText(currentMessage.getText());
 
         }
 

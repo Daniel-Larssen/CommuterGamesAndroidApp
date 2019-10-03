@@ -46,7 +46,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="8dp"
-            android:text="Jonas#33445"
             android:textAlignment="center"
             android:textSize="30sp"
             app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -68,7 +67,7 @@
     </android.support.constraint.ConstraintLayout>
 
     <EditText
-        android:id="@+id/firstNameEdit"
+        android:id="@+id/lastNameEdit"
         style="@style/EditTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -84,45 +83,14 @@
         android:layout_marginRight="15dp"
         android:ems="10"
         android:hint="@string/profile_hint_firstname"
-        android:inputType="textPersonName"
-        android:text="Johnny" />
+        android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/phoneNumber"
-        style="@style/EditTextStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/adress"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_toEndOf="@+id/zipCode"
-        android:layout_toRightOf="@+id/zipCode"
-        android:hint="@string/profile_hint_phone"
-        android:inputType="phone" />
-
-    <EditText
-        android:id="@+id/zipCode"
-        style="@style/EditTextStyle"
-        android:layout_width="118dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/adress"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="18dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
-        android:hint="@string/profile_hint_zip"
-        android:inputType="textPostalAddress" />
-
-    <EditText
+            <EditText
         android:id="@+id/adress"
         style="@style/EditTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/firstNameEdit"
+        android:layout_below="@+id/lastNameEdit"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
@@ -140,7 +108,7 @@
         style="@style/EditTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lastNameEdit"
+        android:layout_below="@+id/firstNameEdit"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
@@ -152,28 +120,26 @@
         android:layout_marginRight="15dp"
         android:ems="10"
         android:hint="@string/profile_hint_middlename"
-        android:inputType="textPersonName"
-        android:text="Bob" />
+        android:inputType="textPersonName"/>
 
-    <EditText
-        android:id="@+id/lastNameEdit"
-        style="@style/EditTextStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/userInfo"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="18dp"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginRight="17dp"
-        android:ems="10"
-        android:hint="Lastname"
-        android:inputType="textPersonName"
-        android:text="Lawrence" />
+            <EditText
+                android:id="@+id/firstNameEdit"
+                style="@style/EditTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userInfo"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="18dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="17dp"
+                android:layout_marginRight="17dp"
+                android:ems="10"
+                android:hint="Lastname"
+                android:inputType="textPersonName" />
 
 
             <Button
@@ -181,12 +147,17 @@
                 style="@style/ButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/phoneNumber"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="15dp"
+                android:layout_below="@+id/adress"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:onClick="updateUser"
                 android:text="Update"
-                android:onClick="loginActivity"/>
+                android:layout_marginLeft="15dp"
+                android:layout_marginEnd="15dp"/>
 
         </RelativeLayout>
 

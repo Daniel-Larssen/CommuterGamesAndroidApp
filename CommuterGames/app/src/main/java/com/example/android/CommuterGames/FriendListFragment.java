@@ -23,7 +23,7 @@ public class FriendListFragment extends Fragment {
 
     // Member variables.
     private RecyclerView mRecyclerView;
-    private ArrayList<Friend> mFriendsData;
+    private ArrayList<User> mFriendsData;
     private FriendsAdapter mAdapter;
 
     public FriendListFragment() {
@@ -47,11 +47,8 @@ public class FriendListFragment extends Fragment {
         mFriendsData = new ArrayList<>();
 
         // Initialize the adapter and set it to the RecyclerView.
-        mAdapter = new FriendsAdapter(this.getActivity(), mFriendsData);
+        mAdapter = new FriendsAdapter(this.getActivity(), FriendActivity.userArrayList);
         mRecyclerView.setAdapter(mAdapter);
-
-        // Get the data.
-        initializeData();
 
         // Helper class for creating swipe to dismiss and drag and drop functionality.
         ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(
@@ -63,8 +60,7 @@ public class FriendListFragment extends Fragment {
              *
              * @param recyclerView The RecyclerView that contains the list items
              * @param viewHolder The friendViewHolder that is being moved
-             * @param target The friendViewHolder that you are switching the
-             *               original one with.
+             * @param target The friendViewHolder that you are switching the original one with.
              * @return true if the item was moved, false otherwise
              */
             @Override
@@ -102,42 +98,4 @@ public class FriendListFragment extends Fragment {
         return  rootView;
 
     }
-
-
-    /**
-     * Initialize the user data from resources.
-     * Collects the data for the list-elements.
-     */
-    private void initializeData() {
-        // Get the resources from the XML file.
-        String[] firstnames = getResources().getStringArray(R.array.friend_firstnames);
-        String[] middlenames = getResources().getStringArray(R.array.friend_middlenames);
-        String[] lastnames = getResources().getStringArray(R.array.friend_lastnames);
-        String[] bio = getResources().getStringArray(R.array.friend_bio);
-        TypedArray friendsImageResources = getResources().obtainTypedArray(R.array.friend_images);
-
-        // Clear the existing data (to avoid duplication).
-        mFriendsData.clear();
-
-        // Create the ArrayList of friend objects with the titles and
-        // information about each friend
-        for (int i = 0; i < firstnames.length; i++) {
-            //TODO: CREATE TEMPORARY LIST OF FRIENDS.
-            mFriendsData.add(new Friend(firstnames[i], middlenames[i], lastnames[i], lastnames[i], bio[i], friendsImageResources.getResourceId(i, 0)));
-        }
-
-        // Recycle the typed array.
-        friendsImageResources.recycle();
-
-        // Notify the adapter of the change.
-        mAdapter.notifyDataSetChanged();
-    }
-
-
-    public static FriendListFragment newInstance() {
-        return new FriendListFragment();
-    }
-
-
-
 }

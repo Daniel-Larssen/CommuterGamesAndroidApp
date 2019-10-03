@@ -70,7 +70,7 @@ class Game {
         return title;
     }
 
-    // Metode som lager en ArrayList med Vare-objekter basert på en streng med JSONdata
+    // Metode som lager en ArrayList med spill-objekter basert på en streng med JSONdata
     public static ArrayList<Game> lagGameListe(String jsonVarer) throws JSONException, NullPointerException {
         ArrayList<Game> gameList = new ArrayList<Game>();
         JSONObject jsonData = new JSONObject(jsonVarer);

@@ -16,19 +16,13 @@
 
 package com.example.android.CommuterGames;
 
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 
@@ -54,34 +48,11 @@ public class GamelistActivity extends Activity implements Response.Listener<Stri
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         // Collects all the games into the list, also created the new fragment in onResponse.
-        readAllGames();
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, gameliste_URL, this, this);
+        readData(stringRequest);
 
     }
 
-    // Reads all the games on the database.
-    private  void readAllGames() {
-        if (isOnline()) {
-            RequestQueue queue = Volley.newRequestQueue(this);
-            StringRequest stringRequest = new StringRequest(Request.Method.GET, gameliste_URL, this, this);
-            queue.add(stringRequest);
-        } else {
-            Toast.makeText(this, "Ingen nettverkstilgang. Kan ikke laste varer.", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    // TODO finish the collection of data
-    public boolean isOnline() {
-        ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Activity.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-        return (networkInfo != null && networkInfo.isConnected());
-    }
-
-    // TODO finish the collection of data
-    @Override
-    public void onErrorResponse(VolleyError error) {
-        Toast.makeText(this, "volley feilet!", Toast.LENGTH_LONG).show();
-
-    }
 
     // TODO finish the collection of data
     @Override
@@ -96,11 +67,6 @@ public class GamelistActivity extends Activity implements Response.Listener<Stri
 
         // If the game-fragment is set up already.
         if (findViewById(R.id.game_fragment_container) != null) {
-
-            // To not end up with overlapping fragments at return from friendchat
-            //if (savedInstanceState != null) {
-            //  return;
-            //}
 
             // Sets up the game-list fragment and attaches it to game_fragment_container.
             GameListFragment gameListFragment = new GameListFragment();

@@ -40,7 +40,7 @@ import java.util.ArrayList;
 class FriendsAdapter extends RecyclerView.Adapter<FriendsAdapter.ViewHolder>  {
 
     // Member variables.
-    private ArrayList<Friend> mFriendData;
+    private ArrayList<User> mFriendData;
     private Context mContext;
 
 
@@ -50,7 +50,7 @@ class FriendsAdapter extends RecyclerView.Adapter<FriendsAdapter.ViewHolder>  {
      * @param friendData ArrayList containing the friend data.
      * @param context Context of the application.
      */
-    FriendsAdapter(Context context, ArrayList<Friend> friendData) {
+    FriendsAdapter(Context context, ArrayList<User> friendData) {
         this.mFriendData = friendData;
         this.mContext = context;
     }
@@ -78,10 +78,10 @@ class FriendsAdapter extends RecyclerView.Adapter<FriendsAdapter.ViewHolder>  {
     @Override
     public void onBindViewHolder(FriendsAdapter.ViewHolder holder, int position) {
         // Get current friend.
-        Friend currentFriend = mFriendData.get(position);
+        User currentUser = mFriendData.get(position);
 
         // Populate the textviews with data.
-        holder.bindTo(currentFriend);
+        holder.bindTo(currentUser);
     }
 
     /**
@@ -122,12 +122,12 @@ class FriendsAdapter extends RecyclerView.Adapter<FriendsAdapter.ViewHolder>  {
         }
 
         // Sets the values where they should be
-        void bindTo(Friend currentFriend){
+        void bindTo(User currentFriend){
             // Populate the textviews with data.
             mFullname.setText(currentFriend.getFullName());
 
             // Load the images into the ImageView using the Glide library.
-            Glide.with(mContext).load(currentFriend.getUserImage()).into(mUserImage);
+            //Glide.with(mContext).load(R.into(mUserImage);
         }
 
         /**
@@ -137,14 +137,15 @@ class FriendsAdapter extends RecyclerView.Adapter<FriendsAdapter.ViewHolder>  {
          */
         @Override
         public void onClick(View view) {
-            Friend currentFriend = mFriendData.get(getAdapterPosition());
-
+            User currentFriend = mFriendData.get(getAdapterPosition());
 
                 ChatFragment chatFragment = ChatFragment.newInstance();
 
                 // Adds the arguments to the fragment.
                 Bundle bundle = new Bundle();
-                bundle.putString("fullname", currentFriend.getFullName());
+
+                // This is the id of the user, is used in CHatFragment.
+                bundle.putInt("id", currentFriend.getId());
                 chatFragment.setArguments(bundle);
 
                 // Checks what orientation it has, and chooses which to update.

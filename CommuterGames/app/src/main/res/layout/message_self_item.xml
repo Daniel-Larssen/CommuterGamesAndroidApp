@@ -12,17 +12,17 @@
         android:padding="5dp">
 
         <TextView
-            android:id="@+id/username"
+            android:id="@+id/message"
             style="@style/TextAppearance.AppCompat.Subhead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/news_placeholder"
-            android:layout_below="@id/message"
+            android:layout_below="@id/username"
             android:textColor="?android:textColorSecondary"
              />
 
         <TextView
-            android:id="@+id/message"
+            android:id="@+id/username"
             style="@style/TextAppearance.AppCompat.Subhead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

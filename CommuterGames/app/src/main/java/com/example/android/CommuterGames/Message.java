@@ -16,29 +16,61 @@
 
 package com.example.android.CommuterGames;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
 /**
  * Data model for each row of the messages that lie in the database.
  */
 class Message {
 
     // Member variables representing name, username, bio and image of the user.
-    private String message;
+    private String id;
+    private String room_id;
+    private String user_id;
     private String username;
+    private String time;
+    private String text;
+    private String viewed;
 
-    /**
-     * Constructor for the Game data model.
-     *
+    private static final String TABLE_NAME = "user_chat";
+    private static final String KOL_NAME_ID = "id";
+    private static final String KOL_NAME_ROOM_ID = "room_id";
+    private static final String KOL_NAME_USER_ID = "user_id";
+    private static final String KOL_NAME_USERNAME = "username";
+    private static final String KOL_NAME_TIME = "time";
+    private static final String KOL_NAME_TEXT = "text";
+    private static final String KOL_NAME_VIEWED = "viewed";
 
-     */
-    public Message(String message, String username) {
-
-        this.message = message;
-        this.username = username;
+    public Message(JSONObject jsonMessage) {
+        this.id = jsonMessage.optString(KOL_NAME_ID);
+        this.room_id = jsonMessage.optString(KOL_NAME_ROOM_ID);
+        this.user_id = jsonMessage.optString(KOL_NAME_USER_ID);
+        this.username = jsonMessage.optString(KOL_NAME_USERNAME);
+        this.time = jsonMessage.optString(KOL_NAME_TIME);
+        this.text = jsonMessage.optString(KOL_NAME_TEXT);
+        this.viewed = jsonMessage.optString(KOL_NAME_VIEWED);
     }
 
+    public static ArrayList<Message> createMessageList(String jsonMessages) throws JSONException, NullPointerException {
+        ArrayList<Message> messageList = new ArrayList<Message>();
+        JSONObject jsonData = new JSONObject(jsonMessages);
+        JSONArray jsonMessageTable = jsonData.optJSONArray(TABLE_NAME);
 
-    public String getMessage() {
-        return message;
+        for(int i = 0; i < jsonMessageTable.length(); i++) {
+            JSONObject jsonMessage = (JSONObject) jsonMessageTable.get(i);
+            Message thisUser = new Message(jsonMessage);
+            messageList.add(thisUser);
+        }
+
+        return messageList;
+    }
+
+    public String getText() {
+        return text;
     }
 
     public String getUsername() {
