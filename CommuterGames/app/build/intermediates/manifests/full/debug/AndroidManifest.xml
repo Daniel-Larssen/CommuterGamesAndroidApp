@@ -7,12 +7,12 @@
     <uses-sdk
         android:minSdkVersion="15"
         android:targetSdkVersion="26" />
-
     <!-- Needed to use the REST.api -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name="com.example.CommuterGames"
         android:allowBackup="true"
         android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
         android:debuggable="true"
@@ -21,7 +21,15 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme.NoActionBar" >
-        <activity android:name="com.example.android.CommuterGames.GamelistActivity" >
+        <activity
+            android:name="com.example.android.CommuterGames.data.ui.login.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:parentActivityName="com.example.android.CommuterGames.GameListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.CommuterGames.GameListActivity" />
+        </activity>
+        <activity android:name="com.example.android.CommuterGames.GameListActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,10 +39,10 @@
         <activity
             android:name="com.example.android.CommuterGames.GameActivity"
             android:label="Game"
-            android:parentActivityName="com.example.android.CommuterGames.GamelistActivity" >
+            android:parentActivityName="com.example.android.CommuterGames.GameListActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.CommuterGames.GamelistActivity" />
+                android:value="com.example.android.CommuterGames.GameListActivity" />
         </activity>
         <!--
         <activity
@@ -49,18 +57,18 @@
         <activity
             android:name="com.example.android.CommuterGames.ProfileActivity"
             android:label="Profile"
-            android:parentActivityName="com.example.android.CommuterGames.GamelistActivity" >
+            android:parentActivityName="com.example.android.CommuterGames.GameListActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.CommuterGames.GamelistActivity" />
+                android:value="com.example.android.CommuterGames.GameListActivity" />
         </activity>
         <activity
             android:name="com.example.android.CommuterGames.FriendActivity"
             android:label=""
-            android:parentActivityName="com.example.android.CommuterGames.GamelistActivity" >
+            android:parentActivityName="com.example.android.CommuterGames.GameListActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.CommuterGames.GamelistActivity" />
+                android:value="com.example.android.CommuterGames.GameListActivity" />
         </activity>
 
         <provider

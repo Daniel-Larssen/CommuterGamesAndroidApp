@@ -9,7 +9,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
 
-
 /**
  * The activity where the games is placed.
  */
@@ -28,15 +27,13 @@ public class GameActivity extends AppCompatActivity {
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
 
-        // TODO Collect the data about hte game with getExtra, when its needed.
+        // TODO Collect the data about the game with getExtra, when its needed.
 
         // Sets up the WebView for the html-file where the javascript game is placed.
         // TODO: Collect the game from the database.
         WebView web = findViewById(R.id.webview);
         web.getSettings().setJavaScriptEnabled(true);
         web.loadUrl("file:///android_asset/game1.html");
-
-
 
     }
 
@@ -53,6 +50,7 @@ public class GameActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        // If the favorite button is clicked.
         if (id == R.id.favorite) {
             // Inside here we will need
             if (item.getTitle().toString() == "Yes") {

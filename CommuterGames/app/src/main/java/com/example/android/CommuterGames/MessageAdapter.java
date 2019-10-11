@@ -1,17 +1,7 @@
-/*
- * Copyright (C) 2018 Google Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+/**
+ * The code in the Adapter classes are based of
+ * the code we used on the sport-list-app when
+ * we learned about RecycleView
  */
 
 package com.example.android.CommuterGames;
@@ -23,36 +13,37 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.android.CommuterGames.Message.Message;
+import com.example.android.CommuterGames.Message.MessageController;
+import com.example.android.CommuterGames.Message.MessageView;
+
 import java.util.ArrayList;
 
 /***
  * The adapter class for the RecyclerView, contains the messages data.
  */
-class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHolder>  {
+class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHolder> {
 
     // Member variables.
     private ArrayList<Message> mMessageData;
     private Context mContext;
 
-
     /**
-     * Constructor that passes in the sports data and the context.
+     * Constructor that passes in the message data and the context.
      *
      * @param messageData ArrayList containing the message data.
-     * @param context Context of the application.
+     * @param context     Context of the application.
      */
     MessageAdapter(Context context, ArrayList<Message> messageData) {
         this.mMessageData = messageData;
         this.mContext = context;
     }
 
-
-
     /**
      * Required method for creating the viewholder objects.
      *
-     * @param parent The ViewGroup into which the new View will be added
-     *               after it is bound to an adapter position.
+     * @param parent   The ViewGroup into which the new View will be added
+     *                 after it is bound to an adapter position.
      * @param viewType The view type of the new View.
      * @return The newly created ViewHolder.
      */
@@ -64,16 +55,21 @@ class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHolder>  {
     /**
      * Required method that binds the data to the viewholder.
      *
-     * @param holder The viewholder into which the data should be put.
+     * @param holder   The viewholder into which the data should be put.
      * @param position The adapter position.
      */
     @Override
     public void onBindViewHolder(MessageAdapter.ViewHolder holder, int position) {
-        // Get current sport.
+
+        // Collects current Message.
         Message currentMessage = mMessageData.get(position);
 
-        // Populate the textviews with data.
-        holder.bindTo(currentMessage);
+        // Creates the MessageController for the Message
+        MessageView messageView = new MessageView();
+        MessageController controller = new MessageController(currentMessage, messageView);
+
+        // Populate the TextViews with data, sends in the MessageController.
+        holder.bindTo(controller);
     }
 
     /**
@@ -110,14 +106,12 @@ class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHolder>  {
         }
 
         // Sets the values where they should be
-        void bindTo(Message currentMessage){
+        void bindTo(MessageController controller) {
 
-            // Populate the textviews with data.
-            mUsername.setText(currentMessage.getUsername());
-            mMessage.setText(currentMessage.getText());
-
+            // Populates the TextViews with Strings
+            mUsername.setText(controller.getMessageUsername());
+            mMessage.setText(controller.getMessageText());
         }
-
     }
 }
 

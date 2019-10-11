@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.CommuterGames">
-
     <!-- Needed to use the REST.api -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,9 +10,17 @@
         android:icon="@drawable/app_icon"
         android:label="CommuterGames"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar">
-
-        <activity android:name=".GamelistActivity">
+        android:theme="@style/AppTheme.NoActionBar"
+        android:name="com.example.CommuterGames">
+        <activity
+            android:name=".data.ui.login.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:parentActivityName=".GameListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.CommuterGames.GameListActivity" />
+        </activity>
+        <activity android:name=".GameListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,10 +30,10 @@
         <activity
             android:name=".GameActivity"
             android:label="Game"
-            android:parentActivityName=".GamelistActivity">
+            android:parentActivityName=".GameListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.CommuterGames.GamelistActivity" />
+                android:value="com.example.android.CommuterGames.GameListActivity" />
         </activity>
         <!--
         <activity
@@ -36,22 +43,23 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.CommuterGames.GamelistActivity" />
-        </activity>-->
+        </activity>
+        -->
         <activity
             android:name=".ProfileActivity"
             android:label="Profile"
-            android:parentActivityName=".GamelistActivity">
+            android:parentActivityName=".GameListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.CommuterGames.GamelistActivity" />
+                android:value="com.example.android.CommuterGames.GameListActivity" />
         </activity>
         <activity
             android:name=".FriendActivity"
             android:label=""
-            android:parentActivityName=".GamelistActivity">
+            android:parentActivityName=".GameListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.CommuterGames.GamelistActivity" />
+                android:value="com.example.android.CommuterGames.GameListActivity" />
         </activity>
     </application>
 
