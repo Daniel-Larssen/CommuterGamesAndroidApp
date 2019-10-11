@@ -1,5 +1,5 @@
-package com.example.android.CommuterGames.Game;
+package com.example.android.CommuterGames.Message;
 
-public class GameView {
+public class MessageView {
 
 }

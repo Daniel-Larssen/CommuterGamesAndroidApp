@@ -1,4 +1,11 @@
-package com.example.android.CommuterGames.ui.login;
+/**
+ * This part of the code, and the rest of the classes inside
+ * of the data-package, was mostly taken from the Login Activity
+ * template, and only has a few changes made, mainly in
+ * LoginDataSource.
+ */
+
+package com.example.android.CommuterGames.data.ui.login;
 
 import android.app.Activity;
 import android.arch.lifecycle.Observer;
@@ -19,8 +26,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.CommuterGames.R;
-import com.example.android.CommuterGames.ui.login.LoginViewModel;
-import com.example.android.CommuterGames.ui.login.LoginViewModelFactory;
 
 public class LoginActivity extends AppCompatActivity {
 

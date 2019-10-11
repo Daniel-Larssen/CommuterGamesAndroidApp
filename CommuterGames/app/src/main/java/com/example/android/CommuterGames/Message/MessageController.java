@@ -1,41 +1,18 @@
-package com.example.android.CommuterGames.Game;
+package com.example.android.CommuterGames.Message;
 
-public class GameController {
+public class MessageController {
 
-    private Game model;
-    private GameView view;
+    private Message model;
+    private MessageView view;
 
-    public GameController(Game model, GameView view) {
+    public MessageController(Message model, MessageView view) {
         this.model = model;
         this.view = view;
     }
 
-    public int getGameImageResource() {
-        return model.getImageResource();
-    }
+    // --- GET's ---
+    public String getMessageText() {return model.getText();}
 
-    public String getGameGenre() {
-        return model.getGenre();
-    }
-
-    public String getGameTitle() {
-        return model.getTitle();
-    }
-
-    public String getGameDescription() {
-        return model.getDescription();
-    }
-
-    public String getGameCreator() {
-        return model.getCreator();
-    }
-
-    public int getGameRating() {
-        return model.getRating();
-    }
-
-    public int getGameId() {
-        return model.getId();
-    }
+    public String getMessageUsername() { return model.getUsername(); }
 
 }

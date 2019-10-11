@@ -26,11 +26,10 @@ import java.util.ArrayList;
  * item from the friend-list is clicked on in the friend-list
  * fragment
  */
-public class ChatFragment extends Fragment {
+public class MessageFragment extends Fragment {
 
     // Used when setting up the RecycleView with messages-objects.
     private RecyclerView mRecyclerView;
-    private ArrayList<Message> mFriendsData;
     private MessageAdapter mAdapter;
 
     public static ArrayList<Message> messageArrayList = new ArrayList<Message>();
@@ -42,10 +41,9 @@ public class ChatFragment extends Fragment {
     public static String messageList_url;
     public static RequestQueue queue;
 
-    public ChatFragment() {
+    public MessageFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -76,8 +74,6 @@ public class ChatFragment extends Fragment {
         linearLayoutManager.setReverseLayout(true);
         mRecyclerView.setLayoutManager(linearLayoutManager);
 
-        //----- --- -- https://stackoverflow.com/questions/28599377/how-to-run-volley-in-fragmentnavigation-drawer#28601622 -- --- -----
-
         // Makes a new Volley with the FriendActivity in the newRequestQueue.
         queue = Volley.newRequestQueue(getActivity().getApplicationContext());
 
@@ -105,22 +101,18 @@ public class ChatFragment extends Fragment {
         });
 
 
-
         // ----------------------------------------------------------------------------------------------------------------------------
 
-        // Adds the stringrequest to the queue.
+        // Adds the StringRequest to the queue.
         queue.add(stringRequest);
 
         return rootView;
     }
 
     /**
-     * @return Returns a new chatfragment.
+     * @return Returns a new ChatFragment.
      */
-    public static ChatFragment newInstance() {
-        return new ChatFragment();
+    public static MessageFragment newInstance() {
+        return new MessageFragment();
     }
-
-
-
 }

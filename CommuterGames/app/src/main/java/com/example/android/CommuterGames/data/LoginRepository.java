@@ -1,3 +1,10 @@
+/**
+ * This part of the code, and the rest of the classes inside
+ * of the data-package, was mostly taken from the Login Activity
+ * template, and only has a few changes made, mainly in
+ * LoginDataSource.
+ */
+
 package com.example.android.CommuterGames.data;
 
 import com.example.android.CommuterGames.data.model.LoggedInUser;
@@ -8,13 +15,13 @@ import com.example.android.CommuterGames.data.model.LoggedInUser;
  */
 public class LoginRepository {
 
-    private static volatile LoginRepository instance;
+    public static volatile LoginRepository instance;
 
     private LoginDataSource dataSource;
 
     // If user credentials will be cached in local storage, it is recommended it be encrypted
     // @see https://developer.android.com/training/articles/keystore
-    private LoggedInUser user = null;
+    public static LoggedInUser user = null;
 
     // private constructor : singleton access
     private LoginRepository(LoginDataSource dataSource) {
@@ -28,7 +35,7 @@ public class LoginRepository {
         return instance;
     }
 
-    public boolean isLoggedIn() {
+    public static boolean isLoggedIn() {
         return user != null;
     }
 
@@ -37,15 +44,17 @@ public class LoginRepository {
         dataSource.logout();
     }
 
-    private void setLoggedInUser(LoggedInUser user) {
+    public void setLoggedInUser(LoggedInUser user) {
         this.user = user;
         // If user credentials will be cached in local storage, it is recommended it be encrypted
         // @see https://developer.android.com/training/articles/keystore
     }
 
     public Result<LoggedInUser> login(String username, String password) {
-        // handle login
+
+        // This method handles the login
         Result<LoggedInUser> result = dataSource.login(username, password);
+
         if (result instanceof Result.Success) {
             setLoggedInUser(((Result.Success<LoggedInUser>) result).getData());
         }

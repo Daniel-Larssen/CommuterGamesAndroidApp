@@ -1,4 +1,5 @@
 package com.example.android.CommuterGames.Game;
 
-class GameView {
+public class GameView {
+
 }

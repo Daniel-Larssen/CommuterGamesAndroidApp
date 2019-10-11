@@ -7,19 +7,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.bumptech.glide.Glide;
 
 /**
  * The DetailFragment shows the details of the game
  * that is clicked in the list of games in GamesListFragment,
  * opens up in gamesListActivity.
  */
-public class DetailFragment extends Fragment {
+public class GameDetailFragment extends Fragment {
 
-    public DetailFragment() {
+    public GameDetailFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -40,7 +38,6 @@ public class DetailFragment extends Fragment {
             String genre = bundle.getString("genre");
             int rating = bundle.getInt("rating");
 
-
             // Initialize the views.
             TextView titleView = rootView.findViewById(R.id.titleTextView);
             ImageView gameImage = rootView.findViewById(R.id.gameImageDetail);
@@ -52,15 +49,13 @@ public class DetailFragment extends Fragment {
             genreView.setText(genre);
             descView.setText(desc);
 
-            // Load the image using the Glide library and the Intent extra.
-            //Glide.with(this).load(bundle.getInt("image_resource",0)).into(gameImage);
         }
         return  rootView;
 
     }
 
-    public static DetailFragment newInstance() {
-        return new DetailFragment();
+    public static GameDetailFragment newInstance() {
+        return new GameDetailFragment();
     }
 
 }

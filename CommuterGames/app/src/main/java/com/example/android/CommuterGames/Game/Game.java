@@ -1,22 +1,4 @@
-/*
- * Copyright (C) 2018 Google Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-package com.example.android.CommuterGames;
-
-import android.content.res.TypedArray;
+package com.example.android.CommuterGames.Game;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -24,7 +6,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-class Game {
+public class Game {
 
     // Member variables representing the title, information and image about the game.
     private int id;
@@ -57,8 +39,8 @@ class Game {
         imageResource = 1;
     }
 
-    // Metode som lager en ArrayList med spill-objekter basert på en streng med JSONdata
-    public static ArrayList<Game> lagGameListe(String jsonVarer) throws JSONException, NullPointerException {
+    // Metode som lager en ArrayList med spill-Objekter basert på en string med JSONData
+    public static ArrayList<Game> createGameList(String jsonVarer) throws JSONException, NullPointerException {
         ArrayList<Game> gameList = new ArrayList<Game>();
         JSONObject jsonData = new JSONObject(jsonVarer);
         JSONArray jsonGameTabell = jsonData.optJSONArray(TABLE_NAME);

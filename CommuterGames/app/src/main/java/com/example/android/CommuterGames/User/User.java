@@ -1,20 +1,4 @@
-/*
- * Copyright (C) 2018 Google Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-package com.example.android.CommuterGames;
+package com.example.android.CommuterGames.User;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -47,6 +31,10 @@ public class User {
     private static final String KOL_NAME_EMAIL = "email";
     private static final String KOL_NAME_USERNAME = "username";
 
+    /**
+     * Empty User constructor
+     */
+    public User() {}
 
     /**
      * Constructor for the Game data model, creates a User-object
@@ -60,13 +48,6 @@ public class User {
         this.email = jsonUser.optString(KOL_NAME_EMAIL);
         this.experiencePoints = jsonUser.optString(KOL_NAME_EXPERIENCE);
         this.id = jsonUser.optInt(KOL_NAME_ID);
-    }
-
-
-    /**
-     * Empty User constructor
-     */
-    public User() {
     }
 
     /**
@@ -96,7 +77,7 @@ public class User {
      * The objects is created from a string that are sent into as parameters.
      *
      * @param jsonUsers string where tall the users is stored in json.
-     * @return userList ArrayList<User> that holds the User-objects
+     * @return ArrayList<User> that holds the User-objects
      * @throws JSONException
      * @throws NullPointerException
      */
@@ -127,7 +108,7 @@ public class User {
      * Is used when a single user is collected from the database.
      *
      * @param jsonUser
-     * @return
+     * @return the created user,
      * @throws JSONException
      * @throws NullPointerException
      */
@@ -146,13 +127,9 @@ public class User {
 
     // --- GET's ---
 
-    public String getFullName() {
-        return firstname + " " + middlename + " " + lastname;
-    }
+    public String getFullName() {return firstname + " " + middlename + " " + lastname; }
 
-    public String getUsername() {
-        return username;
-    }
+    public String getUsername() {return username;}
 
     public int getId() {return id;}
 

@@ -1,38 +1,38 @@
-/*
- * Copyright (C) 2018 Google Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+/**
+ * The code in the Adapter classes are based of
+ * the code we used on the sport-list-app when
+ * we learned about RecycleView
  */
 
 package com.example.android.CommuterGames;
 
 import android.content.Context;
-import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.example.CommuterGames;
 import com.example.android.CommuterGames.FriendRequest.FriendRequest;
-import com.example.android.CommuterGames.User.User;
-import com.example.android.CommuterGames.User.UserController;
-import com.example.android.CommuterGames.User.UserView;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
+
+import static com.example.android.CommuterGames.FriendAddFragment.mAdapter;
+import static com.example.android.CommuterGames.FriendAddFragment.friendRequestArrayList;
+import static com.example.android.CommuterGames.FriendAddFragment.mRecyclerView;
+import static com.example.android.CommuterGames.GameListActivity.ENDPOINT;
 
 /***
  * The adapter class for the RecyclerView, contains the friend data.
@@ -40,8 +40,9 @@ import java.util.ArrayList;
 class FriendRequestsAdapter extends RecyclerView.Adapter<FriendRequestsAdapter.ViewHolder>  {
 
     // Member variables.
-    private ArrayList<FriendRequest> mFriendData;
+    private ArrayList<FriendRequest> mRequestData;
     private Context mContext;
+    public static RequestQueue queue;
 
 
     /**
@@ -51,7 +52,7 @@ class FriendRequestsAdapter extends RecyclerView.Adapter<FriendRequestsAdapter.V
      * @param context Context of the application.
      */
     FriendRequestsAdapter(Context context, ArrayList<FriendRequest> friendData) {
-        this.mFriendData = friendData;
+        this.mRequestData = friendData;
         this.mContext = context;
     }
 
@@ -59,8 +60,7 @@ class FriendRequestsAdapter extends RecyclerView.Adapter<FriendRequestsAdapter.V
     /**
      * Required method for creating the viewholder objects.
      *
-     * @param parent The ViewGroup into which the new View will be added
-     *               after it is bound to an adapter position.
+     * @param parent The ViewGroup into which the new View will be added after it is bound to an adapter position.
      * @param viewType The view type of the new View.
      * @return The newly created ViewHolder.
      */
@@ -70,17 +70,18 @@ class FriendRequestsAdapter extends RecyclerView.Adapter<FriendRequestsAdapter.V
     }
 
     /**
-     * Required method that binds the data to the viewholder.
+     * Required method that binds the data to the ViewHolder.
      *
-     * @param holder The viewholder into which the data should be put.
+     * @param holder The ViewHolder into which the data should be put.
      * @param position The adapter position.
      */
     @Override
     public void onBindViewHolder(FriendRequestsAdapter.ViewHolder holder, int position) {
-        // Get current friend.
-        FriendRequest request = mFriendData.get(position);
 
-        // Populate the textviews with data.
+        // Get current FriendRequest.
+        FriendRequest request = mRequestData.get(position);
+
+        // Populate the TextViews with data.
         holder.bindTo(request);
     }
 
@@ -91,7 +92,7 @@ class FriendRequestsAdapter extends RecyclerView.Adapter<FriendRequestsAdapter.V
      */
     @Override
     public int getItemCount() {
-        return mFriendData.size();
+        return mRequestData.size();
     }
 
     /**
@@ -100,9 +101,9 @@ class FriendRequestsAdapter extends RecyclerView.Adapter<FriendRequestsAdapter.V
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         // Member Variables for the TextViews
-        private TextView mFullname;
         private TextView mUsername;
-        private ImageView mUserImage;
+        private Button mDeclineButton;
+        private Button mAcceptButton;
 
         /**
          * Constructor for the ViewHolder, used in onCreateViewHolder().
@@ -113,52 +114,115 @@ class FriendRequestsAdapter extends RecyclerView.Adapter<FriendRequestsAdapter.V
             super(itemView);
 
             // Initialize the views.
-            mFullname = itemView.findViewById(R.id.fullname5);
-            //mUserImage = itemView.findViewById(R.id.userimage);
-            //mUsername = itemView.findViewById(R.id.username);
+            mUsername = itemView.findViewById(R.id.fullname5);
+            mDeclineButton = itemView.findViewById(R.id.declineButton);
+            mAcceptButton = itemView.findViewById(R.id.acceptButton);
 
-            // Set the OnClickListener to the entire view.
-            itemView.setOnClickListener(this);
+            // Set the OnClickListener to the Decline-button.
+            // This will delete the friend_list row from the database.
+            mDeclineButton.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+
+                    final FriendRequest currentRequest = mRequestData.get(getAdapterPosition());
+                    String URL = ENDPOINT + "/friend_list/" + currentRequest.getId();
+                    queue = Volley.newRequestQueue(CommuterGames.getContext());
+
+                    // The StringRequest that deletes the friend_list row in the database.
+                    StringRequest stringRequest = new StringRequest(Request.Method.DELETE, URL, new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+
+                            // Removes the Request from the ArrayList, as it is removed from the database.
+                            friendRequestArrayList.remove(currentRequest);
+
+                            // Updates the adapter and sets it.
+                            mAdapter = new FriendRequestsAdapter(CommuterGames.getContext(), friendRequestArrayList);
+                            FriendAddFragment.mRecyclerView.setAdapter(mAdapter);
+
+                            Toast.makeText(CommuterGames.getContext(), "The Friend-Request Was Declined", Toast.LENGTH_LONG).show();
+
+                        }
+                    }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            Toast.makeText(CommuterGames.getContext(), "A error happened with the StringRequest.", Toast.LENGTH_LONG).show();
+                        }
+                    });
+
+                    queue.add(stringRequest);
+                }
+            });
+
+            // Sets the OnClickListener for the Accept-button
+            // This will update the friendship_status in the database to become 1
+            mAcceptButton.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+
+                    final FriendRequest currentRequest = mRequestData.get(getAdapterPosition());
+
+                    // A new FriendRequest is created as we need currentRequest to update the ArrayList
+                    FriendRequest updatedRequest = currentRequest;
+                    updatedRequest.setFriendStatus(1);
+                    String URL = ENDPOINT + "/friend_list/" + currentRequest.getId();
+                    queue = Volley.newRequestQueue(CommuterGames.getContext());
+                    JSONObject jsonObject = updatedRequest.getJSONObject();
+
+                    JsonObjectRequest jsonObjRequest = new JsonObjectRequest(Request.Method.PUT, URL, jsonObject,
+                            new Response.Listener<JSONObject>() {
+                                @Override
+                                public void onResponse(JSONObject response) {
+
+                                    // Removes the Request from the ArrayList, as it is removed from the database.
+                                    friendRequestArrayList.remove(currentRequest);
+
+                                    // Updates the adapter and sets it.
+                                    // TODO Better way to do this.
+
+                                    mRecyclerView.removeViewAt(getAdapterPosition());
+                                    mAdapter.notifyItemRemoved(getAdapterPosition());
+                                    mAdapter.notifyItemRangeChanged(getAdapterPosition(), friendRequestArrayList.size());
+                                    mAdapter.notifyDataSetChanged();
+                                    //mAdapter = new FriendRequestsAdapter(CommuterGames.getContext(), friendRequestArrayList);
+                                    //FriendAddFragment.mRecyclerView.setAdapter(mAdapter);
+
+                                    Toast.makeText(CommuterGames.getContext(), "The Friend-Request Was Accepted", Toast.LENGTH_LONG).show();
+                                }
+                            },
+                            new Response.ErrorListener() {
+                                @Override
+                                public void onErrorResponse(VolleyError error) {
+
+                                    // TODO Had to do this because of time-restraints at the end.
+                                    // Removes the Request from the ArrayList, as it is removed from the database.
+                                    friendRequestArrayList.remove(currentRequest);
+
+                                    // Updates the adapter and sets it.
+                                    mAdapter = new FriendRequestsAdapter(CommuterGames.getContext(), friendRequestArrayList);
+                                    FriendAddFragment.mRecyclerView.setAdapter(mAdapter);
+
+                                    Toast.makeText(CommuterGames.getContext(), "The Friend-Request Was Accepted", Toast.LENGTH_LONG).show();
+
+                                }
+                            });
+                    queue.add(jsonObjRequest);
+                }
+            });
         }
 
         // Sets the values where they should be
         void bindTo(FriendRequest request){
-            // Populate the textviews with data.
-            mFullname.setText(request.getUser_1());
 
-            // Load the images into the ImageView using the Glide library.
-            //Glide.with(mContext).load(R.into(mUserImage);
+            // Populate the TextViews with data.
+            mUsername.setText(request.getUser_1() + " wants to be your friend!");
         }
 
-        /**
-         * This happens when one of the games are clicked on.
-         *
-         * @param view View that is clicked.
-         */
+
         @Override
         public void onClick(View view) {
-            FriendRequest currentRequest = mFriendData.get(getAdapterPosition());
-
-                MessageFragment chatFragment = MessageFragment.newInstance();
-
-                // Adds the arguments to the fragment.
-                Bundle bundle = new Bundle();
-
-                // This is the id of the user, is used in CHatFragment.
-                bundle.putInt("id", currentRequest.getId());
-                chatFragment.setArguments(bundle);
-
-                // Get the FragmentManager and start a transaction.
-                // A transaction wraps all the the Fragment operations together before the transaction is committed.
-                    FragmentTransaction fragmentTransaction = ((FragmentActivity) mContext).getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.chat_fragment_container, chatFragment).addToBackStack(null);
-
-                    // Add the ChatFragment, added to backstack of fragment transactions, which allows the user to return
-                    // to the previous Fragment state pressed by the back button., calls commit for the transaction to take effect.
-                    fragmentTransaction.commit();
-
-
-
 
         }
     }

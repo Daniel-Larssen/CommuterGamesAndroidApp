@@ -5,40 +5,37 @@ import com.example.android.CommuterGames.Game.GameView;
 
 public class UserController {
 
-    private Game model;
-    private GameView view;
+    private User model;
+    private UserView view;
 
-    public UserController(Game model, GameView view) {
+    public UserController(User model, UserView view) {
         this.model = model;
         this.view = view;
     }
 
-    public int getGameImageResource() {
-        return model.getImageResource();
-    }
+    // --- GET's ---
 
-    public String getGameGenre() {
-        return model.getGenre();
-    }
+    public String getUserFullName() { return model.getFullName(); }
 
-    public String getGameTitle() {
-        return model.getTitle();
-    }
+    public String getUserUsername() { return model.getUsername(); }
 
-    public String getGameDescription() {
-        return model.getDescription();
-    }
+    public int getUserId() {return model.getId();}
 
-    public String getGameCreator() {
-        return model.getCreator();
-    }
+    public String getUserFirstname() {return model.getFirstname();}
 
-    public int getGameRating() {
-        return model.getRating();
-    }
+    public String getUserMiddlename() {return model.getMiddlename();}
 
-    public int getGameId() {
-        return model.getId();
-    }
+    public String getUserLastname() {return model.getLastname();}
 
+    // --- SET's ---
+
+    public void setUserId(int id) {model.setId(id);}
+
+    public void setUserUsername(String username) {model.setUsername(username);}
+
+    public void setUserMiddlename(String middlename) {model.setMiddlename(middlename);}
+
+    public void setUserFirstname(String firstname) {model.setFirstname(firstname);}
+
+    public void setUserLastname(String lastname) {model.setLastname(lastname);}
 }
